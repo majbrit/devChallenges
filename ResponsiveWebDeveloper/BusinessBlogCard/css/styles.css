@@ -1,171 +1,17 @@
-.lato-thin {
-    font-family: "Lato", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .lato-light {
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
+
   .lato-regular {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
-  
-  .lato-bold {
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .lato-black {
-    font-family: "Lato", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .lato-thin-italic {
-    font-family: "Lato", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .lato-light-italic {
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .lato-regular-italic {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .lato-bold-italic {
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .lato-black-italic {
-    font-family: "Lato", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-  }
 
 
-  .poppins-thin {
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .poppins-extralight {
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-  }
-  
-  .poppins-light {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .poppins-regular {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .poppins-medium {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
   .poppins-semibold {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
   }
   
-  .poppins-bold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .poppins-extrabold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-  }
-  
-  .poppins-black {
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .poppins-thin-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .poppins-extralight-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 200;
-    font-style: italic;
-  }
-  
-  .poppins-light-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .poppins-regular-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .poppins-medium-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .poppins-semibold-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: italic;
-  }
-  
-  .poppins-bold-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .poppins-extrabold-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-style: italic;
-  }
-  
-  .poppins-black-italic {
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-  }
   
 :root {
     --background: #F2F5F9;
@@ -180,12 +26,13 @@ body {
     background-color: var(--background);
 }
 
-
-
 p {
     font-family: 'Lato';
     color: var(--text);
     font-size: 16px;
+    line-height: 1.5rem;
+    margin: 0;
+
 }
 
 h1, h2 {
@@ -194,17 +41,17 @@ h1, h2 {
     font-size: 24px;
     font-weight: 600;
     letter-spacing: -1px;
+    margin: 0px 0px 12px 0px;
 }
 
 h2 {
     font-size: 16px;
+    margin: 0px 0px 0px 0px;
 }
 
 .small-text {
     font-size: small;
 }
-
-
 
 .flex-container {
     margin-top: 124px;
@@ -221,6 +68,15 @@ h2 {
     overflow: hidden;
 }
 
+.profile {
+  border-top: 1px solid var(--background);
+  padding: 24px 32px;
+  display: flex;
+}
+
+.content {
+  margin: 0px 32px 24px; 
+}
 
 figure {
     margin: 0;
@@ -232,20 +88,21 @@ figure {
     width: 100%;
     z-index: 0;
 }
+
 .overlay-image {
     width: calc(100% + 2px);
     position: absolute;
     bottom: 5px;
     z-index: 2;
 }
+
 .avatar-image {
     border-radius: 50%;
     width: 35px;
     height: 35px;
     border: 5px solid var(--background);
+    margin-right: 12px;
 }
 
-.profile {
-    border-top: 1px solid var(--background);
-    display: flex;
-}
+
+
