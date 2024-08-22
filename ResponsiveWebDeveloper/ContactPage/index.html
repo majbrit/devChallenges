@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Contact Page</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" sizes="any">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <img class="logo" src="images/contact-form-icon.svg">
+
+    <div class="content">
+        <div class="description">
+            <h1>Interested in our business pricing?</h1>
+            <h2>Fill out the form to view details and we’ll contact you as soon as possible.</h2>
+        </div>
+        <div class="card">
+            <form>
+                <label for="name">Name</label><br>
+                <input type="text" id="name" name="name" value="Ethan Johnson">
+
+                <label for="email">Company Email</label><br>
+                <input type="text" id="email" name="email" value="ethan@johnson.com">
+
+                <label for="subject">Subject</label> 
+                <select name="subject" id="subject">  
+                    <option value="landing">Building Landing pages</option>  
+                    <option value="hi">...</option>  
+                </select>
+
+                <label for="company-size">Company Size</label> 
+                <select name="company-size" id="company-size">  
+                    <option value="ten">10-50 employees</option>  
+                    <option value="fifty" selected>50-100 employees</option>  
+                    <option value="hundred">100+ employees</option>  
+                </select>
+
+                <label for="message">Message</label><br>
+                <input type="text" id="message" name="message" value="50-100 employees">
+
+                <input type="submit" value="Contact Sales">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
