@@ -22,30 +22,37 @@
             <h2>Fill out the form to view details and we’ll contact you as soon as possible.</h2>
         </div>
         <div class="card">
-            <form>
-                <label for="name">Name</label><br>
-                <input type="text" id="name" name="name" value="Ethan Johnson">
-
-                <label for="email">Company Email</label><br>
-                <input type="text" id="email" name="email" value="ethan@johnson.com">
-
-                <label for="subject">Subject</label> 
-                <select name="subject" id="subject">  
-                    <option value="landing">Building Landing pages</option>  
-                    <option value="hi">...</option>  
-                </select>
-
-                <label for="company-size">Company Size</label> 
-                <select name="company-size" id="company-size">  
-                    <option value="ten">10-50 employees</option>  
-                    <option value="fifty" selected>50-100 employees</option>  
-                    <option value="hundred">100+ employees</option>  
-                </select>
-
-                <label for="message">Message</label><br>
-                <input type="text" id="message" name="message" value="50-100 employees">
-
-                <input type="submit" value="Contact Sales">
+            <form class="card-pos">
+                <div class="small-input">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name" placeholder="Ethan Johnson">
+                </div>
+                <div class="small-input">
+                    <label for="email">Company Email</label><br>
+                    <input type="text" id="email" name="email" placeholder="ethan@johnson.com">
+                </div>
+                <div class="small-input">
+                    <label for="company-size">Company Size</label> 
+                    <select name="company-size" id="company-size">  
+                        <option value="ten">10-50 employees</option>  
+                        <option value="fifty" selected>50-100 employees</option>  
+                        <option value="hundred">100+ employees</option>  
+                    </select>
+                </div>
+                <div class="small-input">
+                    <label for="subject">Subject</label> 
+                    <select name="subject" id="subject">  
+                        <option value="landing">Building Landing pages</option>  
+                        <option value="hi">...</option>  
+                    </select>
+                </div>
+                <div class="big-input">
+                    <label for="message">Message</label><br>
+                    <textarea id="message" name="message">50-100 employees</textarea>
+                </div>
+                <div class="big-input">
+                    <button type="submit">Contact Sales</button>
+                </div>
             </form>
         </div>
     </div>
