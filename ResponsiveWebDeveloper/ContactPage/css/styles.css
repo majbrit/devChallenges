@@ -109,25 +109,16 @@
 html {
   background-image: url("../images/bg-image.svg");
   background-size: cover;
-  /*background-repeat: no-repeat;*/
   background-position: center;
-  /*width: 100vw;
-  height: 100vh;*/
   min-height: 100%;
 }
 
 body {
-
   margin: 0;
   padding: 0;
-  
-  
   color: #FFFFFF;
-  font-family: "Be Vietnam Pro";
-
-  
+  font-family: "Be Vietnam Pro"; 
   font-size: 16px;
-
   padding-bottom: 120px;
 }
 
@@ -144,42 +135,28 @@ label {
   font-size: 14px;
 }
 
-
-
 .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-
 }
-
 .description {
-
   width: 640px;
   max-width: 90%;
 }
 
-.card {
-  
-
-}
 .card-pos {
   border-radius: 25px;
   background-color: hsla(0, 0%, 100%, 0.15);
   padding: 32px;
-
   width: 810px;
   display: flex;
   flex-wrap: wrap;
-
   text-align: left;
   gap: 20px;
-
-  
 }
-
 
 label {
   font-size: 14px;
@@ -189,22 +166,17 @@ label {
   display:inline-block;
 }
 
-
 input, select, button, textarea {
   width: 100%;
   border-radius: 15px;
   background-color: #F8FAFC;
-
   border: 0px;
-
   margin:0;
   padding: 24px 20px;
   font-size: 16px;
   font-family: "Be Vietnam Pro";
   font-weight: 700;
-
   color: #111729;
-
   box-sizing:border-box;
   -moz-box-sizing: border-box;
 }
@@ -217,7 +189,6 @@ button {
   color: #4036A9;
   font-size: 20px;
   font-weight: 800;
-
 }
 
 input::placeholder {
@@ -226,9 +197,7 @@ input::placeholder {
 
 textarea {
   size: 2000;
-
   height: 200px;
-
   resize: none;
 }
 
@@ -242,35 +211,28 @@ textarea {
   width: 100%;
 }
 
-
 .logo {
-
   margin: 20px 0px 0px 5%;
 }
 
 @media only screen and (max-width: 1024px) {
   h1 {
     font-size: 50px;
-  }
-  
+  } 
   h2 {
     font-size: 20px;
     font-weight: 400;
     margin-top: 0px;
     margin-bottom: 72px; 
   }
-
   .description {
     width: 450px;
     max-width: 90%;
   }
-
   .card-pos {
-    width: auto;
-    
+    width: auto;    
   }
   .card {
-
     margin: 0px;
     width: 90%;
   }
