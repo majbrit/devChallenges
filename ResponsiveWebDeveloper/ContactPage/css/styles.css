@@ -129,6 +129,8 @@ h1 {
 h2 {
   font-size: 32px;
   font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 72px; 
 }
 
 label {
@@ -222,8 +224,6 @@ textarea {
   h2 {
     font-size: 20px;
     font-weight: 400;
-    margin-top: 0px;
-    margin-bottom: 72px; 
   }
   .description {
     width: 450px;
