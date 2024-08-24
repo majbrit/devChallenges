@@ -1,0 +1,108 @@
+/* <uniquifier>: Use a unique and descriptive class name*/
+/* <weight>: Use a value from 100 to 900*/
+
+/*.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}*/
+
+body {
+  background-color: #121826;
+  /*background-color: white;*/
+  color: #E5E7EB;
+  font-family: "Inter";
+  margin: 0;
+  padding: 0;
+
+  /*fill-opacity 0.3 svg*/
+  background-image: url("../images/blur-radial.svg"), url("../images/blur-radial.svg");
+  background-position: -374.5px -374.5px, calc(100% + 374.5px) calc(-100% - 374.5px);
+  background-repeat: no-repeat, no-repeat;
+  padding: 15px;
+  font-size: 16px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+    
+}
+
+h1 {
+  font-size: 20px;
+}
+
+button {
+  background-color: #652CD1;
+  color: #E5E7EB;
+  border: none;
+  font-size: 12px;
+  border-radius: 20px;
+  padding: 12px;
+  width: 30%;
+  min-width:fit-content;
+}
+
+/*.bg-blur-1 {
+  position:absolute;
+  background-image: url("../images/blur-radial.svg");
+  background-repeat: no-repeat;
+  top: -300px;
+  left: -300px;
+  width: 1000px;
+  height: 1000px;
+}*/
+label, input {
+  color: #A1A1A9;
+  width: 100%;
+  font-size: 12px;
+}
+
+input {
+  box-sizing:border-box;
+  -moz-box-sizing: border-box;
+  border-radius: 12px;
+  background-color: #212936;
+  border: 2.5px solid #4D5562;
+  padding: 16px;
+  color: #E5E7EB;
+}
+
+input:focus {
+  border-color: #845EEE;
+  outline: none;
+
+}
+
+input::placeholder {
+  color: #4D5562;
+}
+
+
+.count {
+  color:  #4D5562;
+}
+
+.step {
+  display: none;
+  background-color: #212936;
+  border: 1px solid;
+  border-color: #4D5562;
+  padding: 40px;
+  border-radius: 15px;
+  width: 455px;
+  max-width: 100%;
+}
+
+.step-count {
+  width: 10px;
+  height: 10px;
+
+  border: 3px solid hsla(0, 16%, 59%, 0.47);
+
+  background-color: #4D5562;
+  border-radius: 50%;
+  display: inline-block;
+}

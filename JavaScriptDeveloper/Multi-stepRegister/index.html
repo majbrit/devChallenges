@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Multi-step Register</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" sizes="any">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="step">
+    <h1>Register</h1>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="enter your name">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="example@gmail.com">
+
+        <button type="submit">Continue</button>
+    </form>
+  </div>
+
+
+
+  <div class="step">
+    <h1>Which topics are you interested in?</h1>
+    <form>
+        <label for="development">Software Development</label>
+        <input type="checkbox" id="development" name="development" value="Software Development">
+        <span>Software Development</span>
+
+        <label for="experience">User Experience</label>
+        <input type="checkbox" id="experience" name="experience" value="User Experience">
+        <span>User Experience</span>
+
+        <label for="design">Graphic Design</label>
+        <input type="checkbox" id="design" name="design" value="Graphic Design">
+        <span>Graphic Design</span>
+
+        <button type="submit">Continue</button>
+    </form>
+  </div>
+
+
+
+  <div class="step">
+    <h1>Summary</h1>
+
+    <p>Name:</p>
+    <p>Email:</p>
+    <p>Topics:</p>
+    <form>
+        <button type="submit">Continue</button>
+    </form>
+  </div>
+
+  <div class="count">
+    <p>Step 1 of 3</p>
+    <span class="step-count"></span>
+    <span class="step-count"></span>
+    <span class="step-count"></span>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
