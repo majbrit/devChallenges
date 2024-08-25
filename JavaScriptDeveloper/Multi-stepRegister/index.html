@@ -22,7 +22,7 @@
         <label for="email">Email</label>
         <input type="text" id="email" name="email" placeholder="example@gmail.com">
 
-        <button type="submit">Continue</button>
+        <button type="button" onclick="continueStep()">Continue</button>
     </form>
   </div>
 
@@ -43,7 +43,7 @@
         <input type="checkbox" id="design" name="design" value="Graphic Design">
         <span>Graphic Design</span>
 
-        <button type="submit">Continue</button>
+        <button type="button" onclick="continueStep()">Continue</button>
     </form>
   </div>
 
@@ -56,15 +56,21 @@
     <p>Email:</p>
     <p>Topics:</p>
     <form>
-        <button type="submit">Continue</button>
+        <button type="button">Confirm</button>
     </form>
   </div>
 
   <div class="count">
-    <p>Step 1 of 3</p>
-    <span class="step-count"></span>
-    <span class="step-count"></span>
-    <span class="step-count"></span>
+    <p>Step <span id="count-num">1</span> of 3</p>
+    <div class="step-shadow">
+      <span class="step-count"></span>
+    </div>
+    <div class="step-shadow">
+      <span class="step-count"></span>
+    </div>
+    <div class="step-shadow">
+      <span class="step-count"></span>
+    </div>
   </div>
 
   <script src="js/script.js"></script>

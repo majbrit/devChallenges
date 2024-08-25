@@ -8,20 +8,24 @@
   font-style: normal;
 }*/
 
+
+/* autofill autocomplete*/
+
 body {
   background-color: #121826;
   /*background-color: white;*/
   color: #E5E7EB;
   font-family: "Inter";
   margin: 0;
-  padding: 0;
+  padding: 0px;
 
   /*fill-opacity 0.3 svg*/
+  background-attachment: fixed;
   background-image: url("../images/blur-radial.svg"), url("../images/blur-radial.svg");
-  background-position: -374.5px -374.5px, calc(100% + 374.5px) calc(-100% - 374.5px);
+  background-position: -374.5px -374.5px, calc(100vw - 375.5px ) calc(100vh - 375.5px);
   background-repeat: no-repeat, no-repeat;
-  padding: 15px;
   font-size: 16px;
+  font-weight: 600;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -32,32 +36,42 @@ body {
 
 h1 {
   font-size: 20px;
+  font-weight: 500;
+  margin-top: 0px;
 }
 
 button {
+  font-family: "Inter";
+  font-weight: 500;
   background-color: #652CD1;
   color: #E5E7EB;
   border: none;
   font-size: 12px;
   border-radius: 20px;
-  padding: 12px;
-  width: 30%;
+  padding: 10.25px;
+  width: 125px;
   min-width:fit-content;
+  border: 2.5px solid transparent;
+  margin-top: 35px;
 }
 
-/*.bg-blur-1 {
-  position:absolute;
-  background-image: url("../images/blur-radial.svg");
-  background-repeat: no-repeat;
-  top: -300px;
-  left: -300px;
-  width: 1000px;
-  height: 1000px;
-}*/
+button:hover {
+
+  background-color: #E5E7EB;
+  color: #652CD1;
+  border-color:  #652CD1;
+}
+
 label, input {
   color: #A1A1A9;
   width: 100%;
   font-size: 12px;
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+label {
+  margin: 24px 0px 8px 0px;
 }
 
 input {
@@ -66,8 +80,9 @@ input {
   border-radius: 12px;
   background-color: #212936;
   border: 2.5px solid #4D5562;
-  padding: 16px;
+  padding: 14.5px;
   color: #E5E7EB;
+  font-weight: 300;
 }
 
 input:focus {
@@ -78,11 +93,14 @@ input:focus {
 
 input::placeholder {
   color: #4D5562;
+  font-weight: 600;
 }
 
 
 .count {
   color:  #4D5562;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .step {
@@ -92,17 +110,35 @@ input::placeholder {
   border-color: #4D5562;
   padding: 40px;
   border-radius: 15px;
-  width: 455px;
-  max-width: 100%;
+  width: 375px;
+  max-width: calc(90% - 80px);
+  flex-direction: column;
+  margin-top: 182px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .step-count {
   width: 10px;
   height: 10px;
 
-  border: 3px solid hsla(0, 16%, 59%, 0.47);
+  padding: 0;
+  margin: 0;
 
   background-color: #4D5562;
   border-radius: 50%;
   display: inline-block;
+}
+
+.step-shadow {
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+  background-color: #662cd139;
 }
