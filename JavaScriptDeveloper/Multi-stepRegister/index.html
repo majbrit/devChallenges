@@ -13,66 +13,92 @@
 </head>
 <body>
 
-  <div class="step">
-    <h1>Register</h1>
-    <form>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="enter your name">
+  <div class="page">
+    <div class="step">
+      <h1>Register</h1>
+      <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="enter your name">
 
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email" placeholder="example@gmail.com">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="example@gmail.com">
 
-        <button type="button" onclick="continueStep()">Continue</button>
-    </form>
-  </div>
-
-
-
-  <div class="step">
-    <h1>Which topics are you interested in?</h1>
-    <form>
-        <label for="development">Software Development</label>
-        <input type="checkbox" id="development" name="development" value="Software Development">
-        <span>Software Development</span>
-
-        <label for="experience">User Experience</label>
-        <input type="checkbox" id="experience" name="experience" value="User Experience">
-        <span>User Experience</span>
-
-        <label for="design">Graphic Design</label>
-        <input type="checkbox" id="design" name="design" value="Graphic Design">
-        <span>Graphic Design</span>
-
-        <button type="button" onclick="continueStep()">Continue</button>
-    </form>
-  </div>
-
-
-
-  <div class="step">
-    <h1>Summary</h1>
-
-    <p>Name:</p>
-    <p>Email:</p>
-    <p>Topics:</p>
-    <form>
-        <button type="button">Confirm</button>
-    </form>
-  </div>
-
-  <div class="count">
-    <p>Step <span id="count-num">1</span> of 3</p>
-    <div class="step-shadow">
-      <span class="step-count"></span>
+          <button type="button" onclick="continueStep()">Continue</button>
+      </form>
     </div>
-    <div class="step-shadow">
-      <span class="step-count"></span>
+
+
+
+    <div class="step">
+      <h1>Which topics are you interested in?</h1>
+      <form>
+          <div class="topic less-space">
+            <label>
+              <input type="checkbox" id="development" name="development" value="Software Development">
+              <span>Software Development</span>
+            </label>
+          </div>
+
+          <div class="topic">
+            <label>
+              <input type="checkbox" id="experience" name="experience" value="User Experience">
+              <span>User Experience</span>
+            </label>
+          </div>
+
+          <div class="topic">
+            <label>
+              <input type="checkbox" id="design" name="design" value="Graphic Design">
+              <span>Graphic Design</span>
+            </label>
+          </div>
+
+          <button type="button" onclick="continueStep()">Continue</button>
+      </form>
     </div>
-    <div class="step-shadow">
-      <span class="step-count"></span>
+
+
+
+    <div class="step">
+      <h1>Summary</h1>
+
+      <p>Name:</p>
+      <p>Email:</p>
+      <p>Topics:</p>
+      <form>
+          <button type="button" onclick="confirmStep()">Confirm</button>
+      </form>
+    </div>
+
+    <div class="count">
+      <p class="count-text">Step <span id="count-num">1</span> of 3</p>
+      <div class="step-shadow">
+        <span class="step-count"></span>
+      </div>
+      <div class="step-shadow">
+        <span class="step-count"></span>
+      </div>
+      <div class="step-shadow">
+        <span class="step-count"></span>
+      </div>
     </div>
   </div>
 
   <script src="js/script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

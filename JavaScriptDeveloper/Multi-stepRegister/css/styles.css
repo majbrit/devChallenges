@@ -57,9 +57,9 @@ button {
 
 button:hover {
 
-  background-color: #E5E7EB;
-  color: #652CD1;
-  border-color:  #652CD1;
+  background-color: #845EEE;
+
+  border-color:  #845EEE;
 }
 
 label, input {
@@ -80,9 +80,10 @@ input {
   border-radius: 12px;
   background-color: #212936;
   border: 2.5px solid #4D5562;
+  
   padding: 14.5px;
   color: #E5E7EB;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 input:focus {
@@ -96,11 +97,22 @@ input::placeholder {
   font-weight: 600;
 }
 
+.page {
+  width: 455px;
+  max-width: 90%;
+}
+
 
 .count {
   color:  #4D5562;
   font-size: 12px;
   font-weight: 500;
+  margin-right: calc(50% - 36px);
+  margin-top: 5px;
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .step {
@@ -110,8 +122,7 @@ input::placeholder {
   border-color: #4D5562;
   padding: 40px;
   border-radius: 15px;
-  width: 375px;
-  max-width: calc(90% - 80px);
+  max-width: 100%;
   flex-direction: column;
   margin-top: 182px;
 }
@@ -128,17 +139,82 @@ form {
   height: 10px;
 
   padding: 0;
-  margin: 0;
+  margin: 5px;
 
-  background-color: #4D5562;
+  background-color: rgb(77, 85, 98);
   border-radius: 50%;
   display: inline-block;
+  
+}
+
+.count-text {
+  margin-right: 20px;
 }
 
 .step-shadow {
-  width: 15px;
-  height: 15px;
-
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background-color: #662cd139;
+}
+
+.topic {
+  
+  width: 100%;
+
+  
+  box-sizing:border-box;
+  -moz-box-sizing: border-box;
+  
+
+  margin-top: 16px;
+
+}
+
+
+.topic label {
+  font-size: 14px;
+  font-family: "Inter";
+  font-weight: 300;
+  color: #4D5562;
+}
+
+.topic label span {
+  background-color: #394150;
+  box-sizing:border-box;
+  -moz-box-sizing: border-box;
+  
+  border: 1px solid #4D5562;
+  width: 100%;
+  border-radius: 12px;
+
+  padding: 15px;
+  color: #4D5562;
+
+  display: block;
+}
+
+.topic label input {
+  position: absolute;
+  display: none;
+  color: #4D5562 !important;
+}
+
+.topic label input + span{
+  color: #A1A1A9
+}
+
+.topic input:checked + span {
+    color: #E5E7EB;
+    background-color: #652CD1;
+    font-weight: 500;
+}
+
+.topic input:hover + span {
+  color: #E5E7EB;
+  background-color: #845EEE;
+  font-weight: 500;
+}
+
+.less-space {
+  margin-top: 11px;
 }
