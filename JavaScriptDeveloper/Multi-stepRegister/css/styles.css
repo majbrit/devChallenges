@@ -218,3 +218,10 @@ form {
 .less-space {
   margin-top: 11px;
 }
+
+#choose-text {
+  font-size: 14px;
+  font-weight: 300;
+  text-shadow: 0px 0px 6px #d12c60, 0px 0px 4px #d12c60, 0px 0px 2px #d12c60;
+  display: none;
+}

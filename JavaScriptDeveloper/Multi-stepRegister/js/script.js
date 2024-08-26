@@ -1,8 +1,9 @@
-var currentStep = 1;// 0
+var currentStep = 0;// 0
 showStep(currentStep);
 
 var namefl, email;
-var topics; 
+var development, experience, design;
+var topics = []; 
 
 function showStep(n) {
   var steps = document.getElementsByClassName("step");  
@@ -32,19 +33,20 @@ function continueStep() {
 function validateForm() {
   
   if(currentStep == 0) {
-    email = document.getElementById("email");
-    namefl = document.getElementById("name");
-    emailValidation = validateInput(email, /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/); 
-    nameValidation = validateInput(namefl, /^[\u00C0-\u017Fa-zA-Z, ]+$/);
+    var emailDoc = document.getElementById("email");
+    email = emailDoc.value;
+    var nameflDoc = document.getElementById("name");
+    namefl = nameflDoc.value;
+    var emailValidation = validateInput(emailDoc, /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/); 
+    var nameValidation = validateInput(nameflDoc, /^[\u00C0-\u017Fa-zA-Z, ]+$/);
     if(emailValidation && nameValidation) {
       return true;
     } else {
       return false;
     }
   } else if (currentStep == 1) {
-    return true;
-  }
-  
+    return validateCheckbox("topic");  
+  }  
 }
 
 function confirmStep() {
@@ -59,4 +61,21 @@ function validateInput(input, validRegex) {
     input.style.boxShadow = "0px 0px 6px #d12c60";
     return false;
   }
+}
+
+function validateCheckbox(boxClass) {
+  var topicsDoc = document.getElementsByClassName(boxClass);
+  for (var i = 0; i < topicsDoc.length; i++) {  
+    var topicChecked = topicsDoc[i].firstElementChild.firstElementChild.checked
+    if(topicChecked) {
+      var topicValue = topicsDoc[i].firstElementChild.firstElementChild.value;
+      topics.push(topicValue);
+    }
+  }
+  if (topics.length > 0) {
+    return true;
+  } else {
+    document.getElementById("choose-text").style.display = "inline";
+    return false;
+  }  
 }
