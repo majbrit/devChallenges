@@ -225,3 +225,34 @@ form {
   text-shadow: 0px 0px 6px #d12c60, 0px 0px 4px #d12c60, 0px 0px 2px #d12c60;
   display: none;
 }
+
+.space1 {
+  margin: 16px 0px 0px 0px;
+}
+
+.space2 {
+  margin: 8px 0px 0px 0px;
+}
+
+.space3 {
+  margin: 25px 0px 0px 0px;
+}
+
+.summary p {
+  font-weight: 400;
+  color: #A1A1A9;
+}
+
+.summary span, li {
+  font-weight: 500;
+  color: #E5E7EB;
+}
+
+.summary ul {
+  margin: 0px;
+}
+
+.summary li {
+  margin-top: 10px;
+}
+

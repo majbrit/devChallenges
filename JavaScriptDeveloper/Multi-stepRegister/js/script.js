@@ -5,6 +5,8 @@ var namefl, email;
 var development, experience, design;
 var topics = []; 
 
+
+
 function showStep(n) {
   var steps = document.getElementsByClassName("step");  
   steps[n].style.display = "flex";
@@ -21,6 +23,9 @@ function showStep(n) {
   }
 
   document.getElementById("count-num").innerHTML = n+1;
+
+  if(currentStep==2)
+    fillSummary();
 }
 
 function continueStep() {
@@ -28,6 +33,7 @@ function continueStep() {
     return false;
   currentStep++;
   showStep(currentStep);
+  
 }
 
 function validateForm() {
@@ -79,3 +85,19 @@ function validateCheckbox(boxClass) {
     return false;
   }  
 }
+
+function fillSummary() {
+  document.getElementById("summaryName").innerHTML = namefl;
+  document.getElementById("summaryEmail").innerHTML = email;
+  fillList(document.getElementById("summaryTopics"));
+}
+
+function fillList(ulList){
+  for (var i = 0; i < topics.length; i++) {
+    var item = document.createElement('li');
+    item.appendChild(document.createTextNode(topics[i]));
+    ulList.appendChild(item);
+  }
+}
+
+console.log("hallo?");
