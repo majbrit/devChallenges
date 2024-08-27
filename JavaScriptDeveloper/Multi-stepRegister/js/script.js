@@ -99,5 +99,3 @@ function fillList(ulList){
     ulList.appendChild(item);
   }
 }
-
-console.log("hallo?");
