@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Task } from '../../models/task.model';
+import { TaskboardService } from '../../services/taskboard.service';
 
 @Component({
   selector: 'app-details',
@@ -9,5 +11,14 @@ import { Component } from '@angular/core';
 })
 export class DetailsComponent {
 
+  constructor(private taskboardService: TaskboardService) {}
+
+  saveTask() {
+    this.taskboardService.saveTask();
+  }
+
+  deleteTask() {
+    this.taskboardService.deleteTask();
+  }
   
 }

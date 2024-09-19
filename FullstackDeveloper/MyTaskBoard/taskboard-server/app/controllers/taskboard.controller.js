@@ -1,19 +1,19 @@
-import { Injectable } from '@angular/core';
-import { Task } from '../models/task.model';
-import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+const axios = require('axios');
+const crypto = require("crypto");
+
+exports.getSessionID = (req, res) => {
+  const sessionID = generateSessionId();
+  req.session.id = sessionID;
+  res.json(req.session.id );
+}
+
+function generateSessionId() {
+  return crypto.randomBytes(16).toString('hex');
+}
 
 
-const baseUrl = 'http://localhost:8000/api/taskboard';
 
-
-@Injectable({
-  providedIn: 'root'
-})
-export class TaskboardService {
-
-  constructor(private http: HttpClient) { }
-
+exports.findAll = (req, res) => {
   tasks = [
     { 
       id: 1,
@@ -44,17 +44,7 @@ export class TaskboardService {
       status: "none" 
     }
   ];
-
-
-  getAll(): Observable<Task[]> {
-    return this.http.get<Task[]>(baseUrl);
-  }
-
-  deleteTask() {
-    
-  }
-
-  saveTask() {
-    console.log("hi");
-  }
+  console.log("send tasks");
+  console.log(tasks);
+  res.send(tasks);
 }

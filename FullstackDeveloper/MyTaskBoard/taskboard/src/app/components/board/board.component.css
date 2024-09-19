@@ -1,9 +1,81 @@
-#add {
-    background-color: 00000033;
-    border-radius: 50%;
+.page {
+   position: relative;
+    top: 0px;
+    margin: 0;
+    min-height: 100%;
+}
+
+.content {
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+}
+
+.add {
+    margin: 4px 0 0 0;
+ 
 }
 
 .icon-box {
-    background-color: #E9A23B;
+    height: 48px;
+    width: 48px;
+    border-radius: 12px;
+    align-content: center;
+    text-align: center;
 
+}
+
+.task {
+
+    margin: 10px 0;
+    border-radius: 16px;
+    padding: 16px
+
+}
+
+.add-icon {
+
+    background-color: #E9A23B;
+}
+
+.add-box {
+
+    background-color: #F5E8D5;
+}
+
+
+
+
+h1 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 50px;
+    
+}
+
+
+
+
+.heading-pic-1 {
+    height: 40px;
+    width: 40px;
+}
+.heading-pic-2 {
+    height: 30px;
+    width: 25px;
+}
+
+#app-details {
+    top:0px;
+    z-index: 4;
+    height: 100%;
+    width: 100%;
 }
