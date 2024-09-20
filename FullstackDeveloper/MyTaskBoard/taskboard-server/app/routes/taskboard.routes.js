@@ -3,7 +3,9 @@ module.exports = app => {
   
     var router = require("express").Router();
 
-    router.get("/", taskboards.findAll);
+    router.get("/board", taskboards.createBoard);
+
+    router.get("/board/:boardId", taskboards.findAll);
 
     router.get("/sessionID", taskboards.getSessionID);
 

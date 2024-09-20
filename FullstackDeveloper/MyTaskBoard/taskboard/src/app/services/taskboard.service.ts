@@ -12,6 +12,7 @@ const baseUrl = 'http://localhost:8000/api/taskboard';
 })
 export class TaskboardService {
 
+  
   constructor(private http: HttpClient) { }
 
   tasks = [
@@ -45,9 +46,12 @@ export class TaskboardService {
     }
   ];
 
+  createBoard(): Observable<{ boardId: string }>{
+    return this.http.get<{ boardId: string }>(`${baseUrl}/board`);
+  }
 
-  getAll(): Observable<Task[]> {
-    return this.http.get<Task[]>(baseUrl);
+  getAll(boardId:string): Observable<Task[]> {
+    return this.http.get<Task[]>(`${baseUrl}/board/${boardId}`);
   }
 
   deleteTask() {
