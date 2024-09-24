@@ -1,5 +1,8 @@
 module.exports = (sequelize, Sequelize) => {
     const Task = sequelize.define("task", {
+      boardid: {
+        type: Sequelize.INTEGER,
+      },
       name: {
         type: Sequelize.STRING
       },

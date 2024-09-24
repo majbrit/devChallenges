@@ -24,6 +24,7 @@ exports.createBoard = (req, res) => {
     
 
     const preTasks = [{
+      boardid: result.id,
       name: "Task in Progress",
       description: " ",
       icon: "alarm",
@@ -31,6 +32,7 @@ exports.createBoard = (req, res) => {
     },
 
     {
+      boardid: result.id,
       name: "Task Completed",
       description: " ",
       icon: "strong",
@@ -38,6 +40,7 @@ exports.createBoard = (req, res) => {
     },
 
     {
+      boardid: result.id,
       name: "Tasks Won't Do",
       description: " ",
       icon: "coffee",
@@ -45,18 +48,20 @@ exports.createBoard = (req, res) => {
     },
 
     {
+      boardid: result.id,
       name: "Tasks To Do",
       description: "Work on a Challenge on devChallenges.io, learn TypeScript.",
       icon: "books",
       status: "none"
     }];
 
-    const promises = preTasks.map(sessionData => {
-      return Session.create(sessionData); // Erstelle ein Promise für jede Session
+    const promises = preTasks.map(preTasks => {
+      return Task.create(preTasks); // Erstelle ein Promise für jede Session
     });
 
     return Promise.all(promises)
     .then(results => {
+      console.log(results);
       res.send(JSON.stringify({boardId: result.id}));
     })
     .catch(error => {
@@ -72,37 +77,16 @@ exports.createBoard = (req, res) => {
 
 
 exports.findAll = (req, res) => {
-  tasks = [
-    { 
-      id: 1,
-      name: "Task in Progress",
-      description: " ",
-      icon: "alarm",
-      status: "progress"
-    },
-    { 
-      id: 2,
-      name: "Task Completed",
-      description: " ",
-      icon: "strong",
-      status: "done" 
-    },
-    { 
-      id: 3,
-      name: "Tasks Won't Do",
-      description: " ",
-      icon: "coffee",
-      status: "not" 
-    },
-    { 
-      id: 4,
-      name: "Tasks To Do",
-      description: "Work on a Challenge on devChallenges.io, learn TypeScript.",
-      icon: "books",
-      status: "none" 
-    }
-  ];
-  console.log("send tasks");
-  console.log(tasks);
-  res.send(tasks);
+  var id = 1;
+
+  Task.findAll({ where: {boardid: id} })
+  .then(data => {
+    res.send(data);
+  })
+  .catch(err => {
+    res.status(500).send({
+      message:
+        err.message || "Some error occurred while retrieving tutorials."
+    });
+  });
 }
