@@ -77,13 +77,18 @@ exports.createBoard = (req, res) => {
 
 
 exports.findAll = (req, res) => {
-  var id = 1;
-
+  var id = req.params.boardId;
+  Board.findOne({ where: {ID: id} }).then(data => {
+    console.log(data);
+    if (!data)
+      console.log("found none");
+  })
   Task.findAll({ where: {boardid: id} })
   .then(data => {
     res.send(data);
   })
   .catch(err => {
+    console.err(err.message);
     res.status(500).send({
       message:
         err.message || "Some error occurred while retrieving tutorials."
