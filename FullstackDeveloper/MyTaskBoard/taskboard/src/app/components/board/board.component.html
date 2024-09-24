@@ -1,0 +1,41 @@
+
+
+
+<div #myPage class="page">
+    <div *ngIf="isVisible" id="app-details">
+        <app-details></app-details>
+    </div>
+
+    <div class="content">
+        <h1> 
+            <img class="heading-pic-1" src="assets/Logo.svg" height="100" width="100" role="presentation">
+            My Task Board
+            <img class="heading-pic-2" src="assets/Edit_duotone.svg" height="100" width="100" role="presentation">
+        </h1>
+
+        <h2>Tasks to keep organised</h2>
+
+
+          <div class="task add-box" *ngFor="let task of tasks; let i = index">
+            <div class="icon-box add-icon">
+                <img class="add" src="assets/Add_round_duotone.svg">
+            </div>
+            <h2>{{ task.name }}</h2>
+            <p>{{ task.description }}</p>
+            
+          </div>
+
+        <div  (click)="showDetails()" class="task add-box">
+            <div class="icon-box add-icon">
+                <img class="add" src="assets/Add_round_duotone.svg">
+            </div>
+            <h2>Add new task</h2>
+        </div>
+
+
+    </div>
+    
+    
+</div>
+
+
